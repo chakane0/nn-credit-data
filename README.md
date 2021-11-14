@@ -4,7 +4,9 @@ We'll train, test and validate a neural network with our credit data. The only t
 # Introduction
 Artificial neural networks are the software implementation of the neuronal structure of our brain. the brain has neurons which can change their output state depending on the strength of their electrical or chemical input. 
 
-A neural network is a massive interconnected network of neurons. Learning occurs by repeadetly activiating certian neural connections
+A neural network is a massive interconnected network of neurons. Learning occurs by repeadetly activiating certain neural connections. Here is a simple video explaining what a <link href="https://www.youtube.com/watch?v=6qS83wD29PY"> neuron</link> is.
+
+# Setup
 
 # Install packages
 run `pip3 install -r requirements.txt` in the terminal
