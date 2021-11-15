@@ -26,7 +26,9 @@ Going back to the image above; at the output layer, we have only one neuron as w
 
 <ol>
   <li>X is our input matrix and Y is out output matrix</li> 
+  <img src="./Assets/step1.png"></img><br>
   <li>Initialize weights and biases with random values<br>
+  <img src="./Assets/step2.png"></img>
     We can define<br>
     <ul>
       <li>"wh" as a weight matrix to the hidden layer</li>
@@ -34,33 +36,39 @@ Going back to the image above; at the output layer, we have only one neuron as w
       <li>"wout" is a weight matrix to the output layer</li>
       <li>"bout" as a bias matrix to the output layer</li>
     </ul>
-  <li>Take the matrix dot product of input and weights assigned to edges between the input and hidden layer, then add bias of the hidden layer neurons to the respective inputs, this is known as linear transformation.<br>
+  <li>Take the matrix dot product of input and weights assigned to edges between the input and hidden layer, then add bias of the hidden layer neurons to the respective inputs, this is known as linear transformation.
+  <img src="./Assets/step3.png"></img><br>
     <ul>
       <li>`hidden_layer_input = matrix_dot_product(X, wh) + bh`</li>
     </ul>
   </li>
-  <li>Perform non linear transformation using an activation function (Sigmoid). This will return the output as: `1/(1 + exp(-x))` <br>
+  <li>Perform non linear transformation using an activation function (Sigmoid). This will return the output as: `1/(1 + exp(-x))` 
+  <img src="./Assets/step4.png"></img><br>
     <ul>
       <li>`hiddenLayer_activations = sigmoid(hidden_layer_inout)`</li>
       <li>`output = sigmoid(output_layer_input)`</li>
     </ul>
   </li>
   <li>Then perform a linear transformation on the hidden layer activation (take the matrix dot product w/ weights and add bias of the output layer neuron) then apply an activation function (sigmoid?) to predict the output.</li>
+  <img src="./Assets/step5.png"></img>
   <ul>
     <li>`output_layer_input = matrix_dot_product(hiddenLayer_activations * wout) + bout`</li>
   </ul>
   </li>
   <li>Compare our prediction with the actual output (for our example this would be the last 20 datasets) and calculate the gradient of error (Actual - Predicted). Error is the <b>Mean square loss = ((Y-t)^2/2</b></li>`E = y - output`
-  <li>Compute the slope/gradient of hidden and output layer neurons (To compute the slope, we calculate the derivatives of non-linear activations x at each layer for each neuron). The gradient of sigmoid can be returned as x * (1 - x)</li> <ul><li> `slope_output_layer = derivatives_sigmoid(output)` </li></ul><ul><li>`slope_hidden_layer = derivatives_sigmoid(hiddenlayer_activations)`</li></ul>
+  <img src="./Assets/step6.png"></img>
+  <li>Compute the slope/gradient of hidden and output layer neurons (To compute the slope, we calculate the derivatives of non-linear activations x at each layer for each neuron). The gradient of sigmoid can be returned as x * (1 - x)</li> <img src="./Assets/step7.png"></img> <ul><li> `slope_output_layer = derivatives_sigmoid(output)` </li></ul><ul><li>`slope_hidden_layer = derivatives_sigmoid(hiddenlayer_activations)`</li></ul>
 <li>Compute the change factor(delta) at the output layer</li> <ul><li>`d_output =E * slope_output_layer`</ul></li>
-<li>The error will propogate back into the network. We can take the dor product of the output layer delta with the weight parameters of edges between the hidden and output layer <ul><li>`wout.T`</ul></li></li>
-<li>Computer change factor(delta) at the hidden layer. </li> <ul><li>`wout = wout + matrix_dor_product(hiddenlayer_activations.Transpose, d_output)*learning_rate`</ul></li>
+<img src="./Assets/step8.png"></img>
+<li>The error will propogate back into the network. We can take the dot product of the output layer delta with the weight parameters of edges between the hidden and output layer <img src="./Assets/step9.png"></img><ul><li>`wout.T`</ul></li></li>
+<li>Computer change factor(delta) at the hidden layer. <img src="./Assets/step10.png"></img></li> <ul><li>`wout = wout + matrix_dot_product(hiddenlayer_activations.Transpose, d_output)*learning_rate`</ul></li>
 <ul>
   <li>`wh = wh + matrix_dot_product(X.Transpose, d_hiddenlayer)*learning_rate`</li>
   <li>The learning rate is the amount that weights are updated</li>
 </ul>
 <li>
   Update the biases at the output and hidden layer: the biases in the network can be updated from the aggregated errors at that neuron
+  <img src="./Assets/step11.png"></img>
   <ul>
     <li>bias at output layer = bias at output layer + sum of delta of output layer at row wise * learning rate</li>
     <li>bias at hidden layer = bias at hidden layer + sum of delta of output layer at row wise * learning rate</li>
