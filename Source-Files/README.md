@@ -3,11 +3,17 @@ Imagine searching for a bug in your code. You create multiple print statements t
   
 # Multi Layer Perceptron
 Going back on perceptrons, theres a few ways of describing the relationship between input and output. One way of viewing this relationship is seeing that each vector input is associated with a weight and bias (describes how "flexible" a perceptron is). The linear representation of this relationship looks like: `w1*x1 + w2*x2 + w3*x3 + 1*b`<br>
-<img src="./Assets/p.png"></img>
+<img src="./Assets/p.png" width="300"></img>
   
 ## Activation Function
-Once we take sum of our weighted input `w1*x1 + w2*x2 + w3*x3 + 1*b` 
-  <img src="Assets/activationfunction.png" width="300"></img>
+This takes the sum of weighted input `w1*x1 + w2*x2 + w3*x3 + 1*b` as an argument and returns the output of a neuron. theres multiple activiation functions<br>.
+<img src="Assets/activationfunction.png" width="300"></img>
+  
+## Foreward/backward Propogation and Epochs
+What if our estimated output is very far off from the actual output? To solve this we need to update our bias and weights based on the error. This works by determining the loss(error) at the output and then propogate it back to the network. The weights are updated to minimize the error resulting from each neuron. What were essentially doing here is determining the gradient (derivative) of each node. A single round of foreward and back propogation is known as 1 training iteration, an <b>epoch</b>.
+  
+
+
                     
 
 
