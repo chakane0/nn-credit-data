@@ -16,6 +16,43 @@ What if our estimated output is very far off from the actual output? To solve th
 <img src="./Assets/multilayer.png" width="500"></img><br>
 We could have as many hidden layers as we want in our case. These layers are stacked between the input and output layers. Every node in a layer is connected to every node in the previous layer and the following layer. 
 
+# Gradient Descent
+Here we update the weights of our multilayer perceptron. Theres 2 types of gradient descent: Full batch and Stochastic gradient descent. Lets say we have 10 data points with two weights w1 and w2. In Full Batch you can use the entire data set, calculate the change in w1 and the change in w2, and update w1 and w2.
+
+For Stochastic gradient descent: You use the 1st data point and calculate the change in w1 and the change in w2 and update w1 and w2. Next you use the 2nd data point and do the same thing until you do all 10 data points. 
+
+# Methodology (Multi-layer Perceptron w/ 1 layer)
+Going back to the image above; at the output layer, we have only one neuron as we are solving a binary classification problem (predict 0 or 1). 
+
+<ol>
+  <li>X is our input matrix and Y is out output matrix</li> 
+  <li>Initialize weights and biases with random values<br>
+    We can define<br>
+    <ul>
+      <li>"wh" as a weight matrix to the hidden layer</li>
+      <li>"bh" as a weight matrix to the hidden layer</li>
+      <li>"wout" is a weight matrix to the output layer</li>
+      <li>"bout" as a bias matrix to the output layer</li>
+    </ul>
+  <li>Take the matrix dot product of input and weights assigned to edges between the input and hidden layer, then add bias of the hidden layer neurons to the respective inputs, this is known as linear transformation.<br>
+    <ul>
+      <li>`hidden_layer_input = matrix_dot_product(X, wh) + bh`</li>
+    </ul>
+  </li>
+  <li>Perform non linear transformation using an activation function (Sigmoid). This will return the output as `1/(1 + exp(-x))`<br>
+    <ul>
+      <li>`hiddenLayer_activations = sigmoid(hidden_layer_inout)`</li>
+      <li>`output = sigmoid(output_layer_input)`</li>
+    </ul>
+  </li>
+  <li>Then perform a linear transformation on the hidden layer activation (take the matrix dot product w/ weights and add bias of the output layer neuron) then apply an activation function (sigmoid?) to predict the output.</li>
+  <ul>
+    <li>`output_layer_input = matrix_dot_product(hiddenLayer_activations * wout) + bout`</li>
+  </ul>
+  </li>
+</ol>
+
+
 
                     
 
