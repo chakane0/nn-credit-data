@@ -2,7 +2,8 @@
 Imagine searching for a bug in your code. You create multiple print statements to pinpoint where exactly the bug is. Then we make changes to the code and test it again. We repeat this process until our code successfully again. Neural networks work almost the same. We take multiple inputs, process it through multiple neurons from multiple hidden layers, and return the result using an output layer. This is considered <b>forward propagation<b>. Then we compare the result with the actual output. We aim to make the output to the neural network as close to the actual output (our original data). Note that each neuron will contribute to some error in our final output. We can reduce the error by minimizing the value/weight of neurons that are contributing more to the error and this happens when "traveling back" to the neurons of the nueral network and finding where the error is. This is considered <a href="https://en.wikipedia.org/wiki/Backpropagation"><b>backward propagation</b></a> We can aim to reduce the number of iterations to minimize the error by implementing an algorithm known as <a href="https://en.wikipedia.org/wiki/Gradient_descent"><b>Gradient Descent</b><a/>.
   
 # Multi Layer Perceptron
-Going back on perceptrons, theres a few ways of describing the relationship between input and output. One way of viewing this relationship is seeing that each vector input is associated with a weight and bias (describes how "flexible" a perceptron is). The linear representation of this relationship looks like: `w1*x1 + w2*x2 + w3*x3 + 1*b`
-<a src="./Assets/perceptron1.png"><a/>
+Going back on perceptrons, theres a few ways of describing the relationship between input and output. One way of viewing this relationship is seeing that each vector input is associated with a weight and bias (describes how "flexible" a perceptron is). The linear representation of this relationship looks like: `w1*x1 + w2*x2 + w3*x3 + 1*b`<br>
+<img src="./Assets/perceptron1.png"></img>
+
  
 
