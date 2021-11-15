@@ -50,6 +50,26 @@ Going back to the image above; at the output layer, we have only one neuron as w
     <li>`output_layer_input = matrix_dot_product(hiddenLayer_activations * wout) + bout`</li>
   </ul>
   </li>
+  <li>Compare our prediction with the actual output (for our example this would be the last 20 datasets) and calculate the gradient of error (Actual - Predicted). Error is the <b>Mean square loss = ((Y-t)^2/2</b></li>`E = y - output`
+  <li>Compute the slope/gradient of hidden and output layer neurons (To compute the slope, we calculate the derivatives of non-linear activations x at each layer for each neuron). The gradient of sigmoid can be returned as x * (1 - x)</li> <ul><li> `slope_output_layer = derivatives_sigmoid(output)` </li></ul><ul><li>`slope_hidden_layer = derivatives_sigmoid(hiddenlayer_activations)`</li></ul>
+<li>Compute the change factor(delta) at the output layer</li> <ul><li>`d_output =E * slope_output_layer`</ul></li>
+<li>The error will propogate back into the network. We can take the dor product of the output layer delta with the weight parameters of edges between the hidden and output layer <ul><li>`wout.T`</ul></li></li>
+<li>Computer change factor(delta) at the hidden layer. </li> <ul><li>`wout = wout + matrix_dor_product(hiddenlayer_activations.Transpose, d_output)*learning_rate`</ul></li>
+<ul>
+  <li>`wh = wh + matrix_dot_product(X.Transpose, d_hiddenlayer)*learning_rate`</li>
+  <li>The learning rate is the amount that weights are updated</li>
+</ul>
+<li>
+  Update the biases at the output and hidden layer: the biases in the network can be updated from the aggregated errors at that neuron
+  <ul>
+    <li>bias at output layer = bias at output layer + sum of delta of output layer at row wise * learning rate</li>
+    <li>bias at hidden layer = bias at hidden layer + sum of delta of output layer at row wise * learning rate</li>
+  </ul>
+</li>
+
+  
+  
+
 </ol>
 
 
