@@ -6,13 +6,16 @@ Artificial neural networks are the software implementation of the neuronal struc
 
 We learn by repeatedly activating certain neural connections over others, this reinforces those connections and makes them more likely to preduce a desired outcome given a specified input. This learning involves feedback. By having desired outcomes, the neural connections cause that specific outcome to be more likely. Our networks will attempt to simplify and mimic brain behavior. We can train these networks in a supervised or unsupervised manner. 
 
-The most basic neural network is a perceptron <img src="./Assets/perceptron.png">img</img>: An algorithm for supervised learning on binary classifiers. Recall, a supervised learning algorithm is the task of learning a function that maps inputs to ourputs based on past input/outpur pairs. A perceptron is a classification algorithm that makes predictions to be used on a linear predictor function combining a set of weights w/ a feature vector. It learns a binary classifier called a threshold function which maps its input (x - a vector) to an output value (f(x) - a single binary value).
+The most basic neural network is a perceptron<br>
+<img src="./Assets/perceptron.png" width="600" height="300"></img><br> This is An algorithm for supervised learning on binary classifiers. Recall, a supervised learning algorithm is the task of learning a function that maps inputs to ourputs based on past input/outpur pairs. A perceptron is a classification algorithm that makes predictions to be used on a linear predictor function combining a set of weights w/ a feature vector. It learns a binary classifier called a threshold function which maps its input (x - a vector) to an output value (f(x) - a single binary value).
 
 # Neural Networks
 Theres many different algorithms for machine learning however the 3 main ones we usually see: Artifical neural network, Convolutional Neural Network, and Recurrent Neural Network. 
 
-### Artificial neural network
-ok
+### Artificial Neural Network
+This type of network can been seen as a group of multiple perceptrons(neurons) at each layer. We can also cateogrize this as a <a href="https://en.wikipedia.org/wiki/Feedforward_neural_network">feed foreward network</a>.<br>
+<img srx="./Assets/ann-diagram.png"><img/>
+
 
 # Setup
 
