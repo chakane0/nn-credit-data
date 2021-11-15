@@ -2,7 +2,7 @@
 We'll train, test and validate a neural network with our credit data. The only thing we know about this data is that theres 999 rows and 27 columns. We also assume thay we can place as many neurons in the hidden layer as you like. 
 
 # Introduction
-Artificial neural networks are the software implementation of the neuronal structure of our brain. the brain has neurons which can change their output state depending on the strength of their electrical or chemical input. A neural network is a massive interconnected network of neurons. Here is a simple video explaining what a <a href="https://www.youtube.com/watch?v=6qS83wD29PY" width="100px" height="75px">neuron</a> is.
+Artificial neural networks are the software implementation of the neuronal structure of our brain. the brain has neurons which can change their output state depending on the strength of their electrical or chemical input. A neural network is a massive interconnected network of neurons. Here is a simple video explaining what a <a href="https://www.youtube.com/watch?v=6qS83wD29PY" width="100" height="75">neuron</a> is.
 
 We learn by repeatedly activating certain neural connections over others, this reinforces those connections and makes them more likely to preduce a desired outcome given a specified input. This learning involves feedback. By having desired outcomes, the neural connections cause that specific outcome to be more likely. Our networks will attempt to simplify and mimic brain behavior. We can train these networks in a supervised or unsupervised manner. 
 
