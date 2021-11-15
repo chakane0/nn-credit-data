@@ -18,12 +18,10 @@ This type of network can been seen as a group of multiple perceptrons(neurons) a
 ANNs are able to learn just about any nonlinear function; people also call them Universal Function Approximators. They have the capacity to learn weights that map any input to the output. One of the key features about this algorithm is we implement an activation function which introduces nonlinear properties to the network. We consider that our output is the activation of a weighted sum on inputs<br>
 <img src="./Assets/perceptron-g.gif"></img>
 
+## Going Through a different example + notes
+<a src="./Source-Files/README.md">Notes + code</a>
 
 
-
-
-
-# Setup
 
 # Install packages
 run `pip3 install -r requirements.txt` in the terminal
