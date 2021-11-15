@@ -13,7 +13,7 @@ This takes the sum of weighted input `w1*x1 + w2*x2 + w3*x3 + 1*b` as an argumen
 What if our estimated output is very far off from the actual output? To solve this we need to update our bias and weights based on the error. This works by determining the loss(error) at the output and then propogate it back to the network. The weights are updated to minimize the error resulting from each neuron. What were essentially doing here is determining the gradient (derivative) of each node. A single round of foreward and back propogation is known as 1 training iteration, an <b>epoch</b>.
   
 # Multi Layer Perceptron
-<a src="./Assets/multilayer.png"></a>
+<img src="./Assets/multilayer.png" width="500"></img>
 
 
                     
