@@ -7,7 +7,7 @@ Going back on perceptrons, theres a few ways of describing the relationship betw
   
 ## Activation Function
 Once we take sum of our weighted input `w1*x1 + w2*x2 + w3*x3 + 1*b` 
-  <img src="./Assets/activation.png" width="300"></img>
+  <img src="Assets/activationfunction.png" width="300"></img>
                     
 
 
