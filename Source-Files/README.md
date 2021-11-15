@@ -39,7 +39,7 @@ Going back to the image above; at the output layer, we have only one neuron as w
       <li>`hidden_layer_input = matrix_dot_product(X, wh) + bh`</li>
     </ul>
   </li>
-  <li>Perform non linear transformation using an activation function (Sigmoid). This will return the output as `1/(1 + exp(-x))`<br>
+  <li>Perform non linear transformation using an activation function (Sigmoid). This will return the output as: `1/(1 + exp(-x))` <br>
     <ul>
       <li>`hiddenLayer_activations = sigmoid(hidden_layer_inout)`</li>
       <li>`output = sigmoid(output_layer_input)`</li>
