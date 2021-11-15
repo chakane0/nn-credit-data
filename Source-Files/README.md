@@ -74,16 +74,4 @@ Going back to the image above; at the output layer, we have only one neuron as w
     <li>bias at hidden layer = bias at hidden layer + sum of delta of output layer at row wise * learning rate</li>
   </ul>
 </li>
-
-  
-  
-
 </ol>
-
-
-
-                    
-
-
- 
-
