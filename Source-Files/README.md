@@ -3,7 +3,7 @@ Imagine searching for a bug in your code. You create multiple print statements t
   
 # Multi Layer Perceptron
 Going back on perceptrons, theres a few ways of describing the relationship between input and output. One way of viewing this relationship is seeing that each vector input is associated with a weight and bias (describes how "flexible" a perceptron is). The linear representation of this relationship looks like: `w1*x1 + w2*x2 + w3*x3 + 1*b`<br>
-<img src="./Assets/perceptron1.png"></img>
+<img src="./Assets/p.png"></img>
 
  
 
