@@ -19,7 +19,7 @@ ANNs are able to learn just about any nonlinear function; people also call them 
 <img src="./Assets/perceptron-g.gif"></img>
 
 ## Going Through a different example + notes
-<a href="./Source-Files/">Notes + code</a>
+<a href="./Source-Files/README.md">Notes + code</a>
 
 
 
