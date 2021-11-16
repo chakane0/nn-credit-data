@@ -1,11 +1,22 @@
 import pandas as pd
-df_train = pd.DataFrame(pd.read_excel("credit-data.xlsx")) # 999 rows x 21 columns
-df_test = pd.DataFrame(pd.read_excel("test-data.xlsx")) # 999 rows x 21 columns
+import numpy as np
+df_train = pd.DataFrame(pd.read_excel("credit-data.xlsx")) # 999 rows x 21 columns -> (999, 21)
+df_test = pd.DataFrame(pd.read_excel("test-data.xlsx")) # 20 rows x 21 columns -> (20, 21)
 
+# convert our dataframe into a matrix which represents our vector inputs
+""" 
+i.e)
+
+[[ 12  48  32 ... 191 201   2]
+ [ 14  12  34 ... 191 201   1]
+ [ 11  42  32 ... 191 201   1]
+ ...
+ [ 14  12  32 ... 191 201   1]
+ [ 11  45  32 ... 192 201   2]
+ [ 12  45  34 ... 191 201   1]]
 
 """
-    12  15  31  40  1264  62  73  2  94  101  2.1  122  25  143  151  1  173  1.1  191  201  2.2
-0   12  30  34  42  8386  61  74  2  93  101    2  122  49  143  152  1  173    1  191  201    2
-1   14  48  32  49  4844  61  71  3  93  101    2  123  33  141  151  1  174    1  192  201    2
-2   13  21  32  40  2923  62  73  1  92  101    1  123  28  141  152  1  174    1  192  201    1
-"""
+training_input_matrix = df_train.to_numpy() 
+training_output_matrix = df_test.to_numpy()
+print(training_input_matrix)
+print(training_output_matrix)
