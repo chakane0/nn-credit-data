@@ -56,4 +56,4 @@ for i in range(epoch):
 # This output represents our predicted values for out input vectors
 print(output)
 
-
+# prints [ [0.97916599], [0.96839672], [[0.03978868]] ]
