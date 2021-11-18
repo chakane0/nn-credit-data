@@ -16,5 +16,9 @@ i.e)
  [ 12  45  34 ... 191 201   1]]
 
 """
-training_input_matrix = df_train.to_numpy() 
-training_output_matrix = df_test.to_numpy()
+training_input_matrix = df_train.to_numpy().T
+training_output_matrix = df_test.to_numpy().T
+
+
+
+print(training_input_matrix)
